@@ -25,7 +25,7 @@ export class LeaderboardComponent {
     { id: 1, name: 'John Doe', gamesPlayed: 43, totalScore: 200 },
     { id: 2, name: 'Jane Smith', gamesPlayed: 32, totalScore: 190 },
     { id: 3, name: 'Bob Johnson', gamesPlayed: 23, totalScore: 125 },
-    { id: 4, name: 'Alice Brown', gamesPlayed: 18, totalScore: 112 },
+    { id: 4, name: 'Alice Brown', gamesPlayed: 18, totalScore: 90 },
   ]);
 
   ngAfterViewInit() {
@@ -41,5 +41,18 @@ export class LeaderboardComponent {
       item.position = index + 1;
     });
     this.dataSource.data = sortedData;
+  }
+
+  getPositionIcon(position: number) {
+    switch (position) {
+      case 1:
+        return '🏆';
+      case 2:
+        return '🥈';
+      case 3:
+        return '🥉';
+      default:
+        return '';
+    }
   }
 }

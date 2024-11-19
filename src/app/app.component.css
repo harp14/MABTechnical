@@ -1,8 +1,33 @@
 .container {
-    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
-.section {
-    padding: 2rem;
-    outline: 1px solid rgba(0, 0, 0, 0.2);
+
+.info-section {
     border-radius: 10px;
+    flex-grow: 1;
+    padding: 2rem;
+    width: 100%;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard-section {
+    border-radius: 10px;
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column;
+    }
 }

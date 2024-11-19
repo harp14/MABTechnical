@@ -1,5 +1,29 @@
 <div class="container">
-  <div class="section">
+  <div class="top-row">
+    <div class="info-section">
+      <app-header-paragraph
+        [header]="'I love some scrabble!'"
+        [paragraph]="'Here is some text to say how much I love it.'">
+      </app-header-paragraph>
+    </div>
+    <div class="info-section">
+      <app-three-row-textbox
+        [titleRow]="'Call us'"
+        [secondRow]="'We are available by phone 9am-5pm'"
+        [thirdRow]="'01234 567 890'"
+        [link]="'tel:+01234567890'"
+      ></app-three-row-textbox>
+    </div>
+    <div class="info-section">
+      <app-three-row-textbox
+        [titleRow]="'Find us'"
+        [secondRow]="'123 Fake Street, Someplace, Nottingham'"
+        [thirdRow]="'Open in maps'"
+        [link]="'https://maps.app.goo.gl/57b7tnS2K7p9rYz48'"
+      ></app-three-row-textbox>
+    </div>
+  </div>
+  <div class="leaderboard-section">
       <app-leaderboard></app-leaderboard>
   </div>
 </div>
